@@ -5,10 +5,10 @@ public class Palindrome {
         String str=ob.nextLine();
         int i=0;
         boolean flag=true;
-        for(int j=str.length()-1;j>=0;i--){
-            if(j>i) break;
+        for(int j=str.length()-1;j>=0;j--){
+            if(j<i) break;
             else {
-                if(str.chartAt(i)!=str.charAt(j)) flag=false;
+                if(str.charAt(i)!=str.charAt(j)) flag=false;
             }
         }
         if (flag) System.out.println("palindrome");
